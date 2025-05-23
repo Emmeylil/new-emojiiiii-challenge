@@ -1,2 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import { Button } from '$lib/components/ui/button';
+	import EmojiGame from '$lib/components/widgets/EmojiGame.svelte';
+	import { credentialStore, modalStore } from '$lib/stores';
+
+	const onclick = () => {
+		$modalStore = { ...$modalStore, open: true };
+	};
+</script>
+
+{#if !$credentialStore.email}
+	<div class="flex h-screen w-full items-center justify-center">
+		<Button {onclick}>Login</Button>
+	</div>
+{:else}
+	<EmojiGame />
+{/if}
