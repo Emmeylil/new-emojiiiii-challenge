@@ -10,7 +10,7 @@
 	};
 </script>
 
-<form {onsubmit} class="space-y-4">
+<form {onsubmit} class="bg:white dark:bg-background space-y-4">
 	<h2 class="mb-6 text-center text-2xl font-bold text-gray-800">Login</h2>
 	<div>
 		<label for="username" class="mb-1 block text-gray-700">Username</label>
