@@ -11,9 +11,18 @@
 </script>
 
 <form {onsubmit} class="bg:white dark:bg-background space-y-4">
-	<h2 class="mb-6 text-center text-2xl font-bold text-gray-800">Login</h2>
+	<h2
+		class="mb-6 text-center text-2xl font-bold text-orange-500
+"
+	>
+		Login
+	</h2>
 	<div>
-		<label for="username" class="mb-1 block text-gray-700">Username</label>
+		<label
+			for="username"
+			class="mb-1 block text-orange-500
+">Username</label
+		>
 		<Input
 			id="username"
 			type="text"
@@ -24,7 +33,7 @@
 	</div>
 
 	<div>
-		<label for="email" class="mb-1 block text-gray-700">Email</label>
+		<label for="email" class="mb-1 block text-orange-500">Email</label>
 		<Input
 			id="email"
 			type="email"
