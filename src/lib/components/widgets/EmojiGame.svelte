@@ -51,7 +51,7 @@
 	function submitGuess() {
 		if (answeredPuzzles.includes(emojiSequence)) {
 			message =
-				'✅ You’ve already answered this one correctly. Please Click Finish For your Game Score to be Updated';
+				'✅ You’ve already answered this correctly. Click "Finish" to update your game scored';
 			return;
 		}
 		if (userGuess.trim().toLowerCase() === correctAnswer.toLowerCase()) {
