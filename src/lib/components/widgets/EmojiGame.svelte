@@ -40,15 +40,9 @@
 	});
 
 	// Pick a random puzzle
-	// Pick today's puzzle deterministically
 	function pickNewPuzzle() {
-		if (puzzles.length === 0) return;
-
-		const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
-		const dateSeed = parseInt(today, 10);
-		const index = dateSeed % puzzles.length;
-
-		({ emojis: emojiSequence, answer: correctAnswer } = puzzles[index]);
+		const randomIndex = Math.floor(Math.random() * puzzles.length);
+		({ emojis: emojiSequence, answer: correctAnswer } = puzzles[randomIndex]);
 	}
 
 	// Submit the guess
