@@ -50,7 +50,8 @@
 	// Submit the guess
 	function submitGuess() {
 		if (answeredPuzzles.includes(emojiSequence)) {
-			message = '✅ You’ve already answered this one correctly.';
+			message =
+				'✅ You’ve already answered this one correctly. Please Click Finish For your Game Score to be Updated';
 			return;
 		}
 		if (userGuess.trim().toLowerCase() === correctAnswer.toLowerCase()) {
