@@ -14,6 +14,8 @@
 	let message = $state('');
 	let score = $state(0);
 	let isLoading = $state(true);
+	let answeredPuzzles: string[] = JSON.parse(localStorage.getItem('answeredPuzzles') || '[]');
+	let alreadyAnswered = $derived(() => answeredPuzzles.includes(emojiSequence));
 
 	// 9. Your Google Sheet API URL (Fetch puzzles from Google Sheet)
 
@@ -47,9 +49,17 @@
 
 	// Submit the guess
 	function submitGuess() {
+		if (answeredPuzzles.includes(emojiSequence)) {
+			message = '✅ You’ve already answered this one correctly.';
+			return;
+		}
 		if (userGuess.trim().toLowerCase() === correctAnswer.toLowerCase()) {
 			score += 1;
 			message = `🎉 Correct! Moving to next...`;
+
+			answeredPuzzles.push(emojiSequence);
+			localStorage.setItem('answeredPuzzles', JSON.stringify(answeredPuzzles));
+
 			userGuess = '';
 			setTimeout(() => {
 				pickNewPuzzle();
