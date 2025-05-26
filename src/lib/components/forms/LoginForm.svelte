@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { Button } from '../ui/button';
 	import { Input } from '../ui/input';
-	import { credentialStore, modalStore } from '$lib/stores';
+	import { credentialStore, modalStore, showGameStore } from '$lib/stores';
 
 	const onsubmit = (evt: SubmitEvent) => {
 		evt.preventDefault();
 
 		$modalStore = { ...$modalStore, open: false };
+
+		$showGameStore = true;
 	};
 </script>
 

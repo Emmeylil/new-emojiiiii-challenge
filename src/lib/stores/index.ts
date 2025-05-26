@@ -14,4 +14,6 @@ const modalStore = writable<iModal>({
     type: "login"
 })
 
-export { modalStore, credentialStore }
+const showGameStore = writable<boolean>(false)
+
+export { modalStore, credentialStore, showGameStore }

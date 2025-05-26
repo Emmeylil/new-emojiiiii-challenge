@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import '../app.css';
-	import { credentialStore, modalStore } from '$lib/stores';
+	import { credentialStore, modalStore, showGameStore } from '$lib/stores';
 	import Dialogs from '$lib/components/widgets/Dialogs.svelte';
 	import { Toaster } from 'svelte-sonner';
 	import { PUBLIC_CONVEX_URL } from '$env/static/public';
@@ -14,6 +14,8 @@
 	onMount(() => {
 		if (!$credentialStore.email) {
 			$modalStore = { ...$modalStore, open: true };
+		} else {
+			$showGameStore = true;
 		}
 	});
 </script>
