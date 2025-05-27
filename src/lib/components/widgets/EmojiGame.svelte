@@ -94,7 +94,7 @@
 	}
 </script>
 
-<main class="flex min-h-screen flex-col items-center justify-center bg-yellow-400 p-4">
+<main class="flex min-h-screen flex-col items-center justify-center bg-cyan-300 p-4">
 	<div class="w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-lg">
 		<h1 class="mb-4 text-2xl font-bold">How well do you know Jumia 🎯</h1>
 
