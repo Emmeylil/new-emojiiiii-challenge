@@ -223,14 +223,14 @@
 												content={header.column.columnDef.header}
 												context={header.getContext()}
 											/>
-											<Button
+											<!-- <Button
 												onclick={handleBulkDelete}
 												size="icon"
 												variant="outline"
 												disabled={selectedRows.length === 0}
 											>
 												<Trash2Icon class="size-4" />
-											</Button>
+											</Button> -->
 										{/if}
 									</Table.Head>
 								{:else}
@@ -300,7 +300,7 @@
 			</Table.Root>
 		</div>
 		<div class="flex items-center justify-between">
-			<div class="flex items-center gap-2 py-4 text-sm text-muted-foreground">
+			<div class="text-muted-foreground flex items-center gap-2 py-4 text-sm">
 				{table.getFilteredSelectedRowModel().rows.length} of{' '}
 				{table.getFilteredRowModel().rows.length} row(s) selected.
 			</div>

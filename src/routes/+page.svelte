@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
 	import EmojiGame from '$lib/components/widgets/EmojiGame.svelte';
+	import Tabs from '$lib/components/widgets/Tabs.svelte';
 	import { showGameStore, modalStore } from '$lib/stores';
 
 	const onclick = () => {
@@ -13,5 +14,5 @@
 		<Button {onclick}>Login</Button>
 	</div>
 {:else}
-	<EmojiGame />
+	<Tabs />
 {/if}

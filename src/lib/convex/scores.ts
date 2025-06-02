@@ -1,5 +1,5 @@
 import { v } from "convex/values"
-import { internalQuery, mutation } from "./_generated/server"
+import { internalQuery, mutation, query } from "./_generated/server"
 import type { iResult } from "@toolsntuts/utils"
 
 export const insertScore = mutation({
@@ -33,6 +33,16 @@ export const insertScore = mutation({
 })
 
 export const getScoresInternal = internalQuery({
+    args: {
+    },
+    handler: async (ctx, args) => {
+        const scores = await ctx.db.query("scores").collect()
+
+        return scores
+    }
+})
+
+export const getScores = query({
     args: {
     },
     handler: async (ctx, args) => {
