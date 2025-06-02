@@ -68,7 +68,6 @@
 
 	const flatten = (item: Doc<'scores'>) => ({
 		name: item.name,
-		email: item.email,
 		createdAt: new Date(item._creationTime).toLocaleString()
 	});
 </script>
